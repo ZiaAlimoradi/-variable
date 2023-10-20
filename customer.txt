@@ -1,0 +1,50 @@
+public class Customer {
+    private String firstName;
+    private String lastName;
+    private String username;
+    private int id;
+
+    public Customer(String firstName, String lastName, String username, int id) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String toString() {
+      return "Customer ID:" + id + "\nFirst Name :" + firstName + "\nLast Name: " + lastName + "\nUser Name:" + username;
+
+  }
+}
+import java.util.ArrayList;
+public class Main {
+    public static void printCustomers(ArrayList<Customer> customers) {
+        for (Customer customer :customers) {
+            System.out.println(customer);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        ArrayList<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("Zia", "Alimoradi", "Ziko90", 31));
+
+        printCustomers(customers);
+    }
+}
